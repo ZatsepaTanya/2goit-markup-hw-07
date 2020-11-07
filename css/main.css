@@ -43,6 +43,20 @@ body {
   margin: 0 auto;
 }
 
+.hero .conteiner {
+  display: flex;
+  flex-direction: column;
+}
+
+.header .conteiner {
+  display: flex;
+  align-items: center;
+}
+
+.footer .conteiner {
+  display: flex;
+}
+
 .backdrop {
   position: fixed;
   width: 100%;
@@ -265,20 +279,6 @@ body {
   padding-bottom: 25px;
 }
 
-.header .conteiner {
-  display: flex;
-  align-items: center;
-}
-
-.navigation {
-  display: flex;
-  align-items: center;
-}
-
-.navigation-list {
-  display: flex;
-}
-
 .header-logo {
   font-family: "Raleway";
   font-weight: 700;
@@ -289,8 +289,9 @@ body {
   margin-right: 93px;
 }
 
-.logo {
-  color: #2196F3;
+.navigation {
+  display: flex;
+  align-items: center;
 }
 
 .navigation-list-item:not(:last-child) {
@@ -309,16 +310,16 @@ body {
   transition-timing-function: cubic-bezier 0.4, 0, 0.2, 1;
 }
 
-.navigation-list-link:hover,
-.navigation-list-link:focus,
-.header-address-list-link:hover,
-.header-address-list-link:focus {
+.navigation-list-link:hover, .navigation-list-link:focus {
   color: #2196F3;
 }
 
-.header-address-list-link:hover .svg,
-.header-address-list-link:focus .svg {
-  fill: #2196F3;
+.navigation-list {
+  display: flex;
+}
+
+.logo {
+  color: #2196F3;
 }
 
 .current {
@@ -348,7 +349,7 @@ body {
   margin-right: 50px;
 }
 
-.header-adress-link-conteiner {
+.header-address-link-conteiner {
   display: flex;
   align-items: center;
 }
@@ -364,6 +365,10 @@ body {
   transition-timing-function: cubic-bezier 0.4, 0, 0.2, 1;
 }
 
+.header-address-list-link:hover, .header-address-list-link:focus {
+  color: #2196F3;
+}
+
 .svg {
   margin-right: 10px;
   transition-property: fill;
@@ -371,15 +376,15 @@ body {
   transition-timing-function: cubic-bezier 0.4, 0, 0.2, 1;
 }
 
+.header-address-list-link:hover .svg,
+.header-address-list-link:focus .svg {
+  fill: #2196F3;
+}
+
 .hero {
   background-color: #2F303A;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg.jpg);
   padding: 200px 0px;
-}
-
-.hero .conteiner {
-  display: flex;
-  flex-direction: column;
 }
 
 .hero-title {
@@ -419,6 +424,24 @@ body {
   display: flex;
 }
 
+.advantages-list-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #212121;
+}
+
+.advantages-list-about {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
 .advantages-list-item {
   width: 270px;
 }
@@ -453,24 +476,6 @@ body {
 
 .item-four::before {
   background-image: url(../images/advantages/advantages4.svg);
-}
-
-.advantages-list-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #212121;
-}
-
-.advantages-list-about {
-  margin-top: 10px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
-  color: #757575;
 }
 
 .our-work {
@@ -535,6 +540,11 @@ body {
   display: flex;
 }
 
+.our-team-info {
+  padding: 30px 32px;
+  background-color: #fff;
+}
+
 .our-team-list-item {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -542,11 +552,6 @@ body {
 
 .our-team-list-item:not(:last-child) {
   margin-right: 30px;
-}
-
-.our-team-info {
-  padding: 30px 32px;
-  background-color: #fff;
 }
 
 .our-team-list-name {
@@ -581,6 +586,10 @@ body {
   transition-timing-function: cubic-bezier 0.4, 0, 0.2, 1;
 }
 
+.our-team-social-icon-link:hover, .our-team-social-icon-link:focus {
+  background-color: #2196F3;
+}
+
 .our-team-social-icon-list {
   display: flex;
   justify-content: space-between;
@@ -593,11 +602,6 @@ body {
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier 0.4, 0, 0.2, 1;
-}
-
-.our-team-social-icon-link:hover,
-.our-team-social-icon-link:focus {
-  background-color: #2196F3;
 }
 
 .our-team-social-icon-link:hover .social-icon,
@@ -637,15 +641,14 @@ body {
   transition-timing-function: cubic-bezier 0.4, 0, 0.2, 1;
 }
 
+.client-item-link:hover, .client-item-link:focus {
+  border: 1px solid #2196F3;
+}
+
 .client-item-svg {
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier 0.4, 0, 0.2, 1;
-}
-
-.client-item-link:hover,
-.client-item-link:focus {
-  border: 1px solid #2196F3;
 }
 
 .client-item-link:hover .client-item-svg,
@@ -656,10 +659,6 @@ body {
 .footer {
   background-color: #2F303A;
   padding: 60px 0px;
-}
-
-.footer .conteiner {
-  display: flex;
 }
 
 .footer-logo {
@@ -730,6 +729,10 @@ body {
   transition-timing-function: cubic-bezier 0.4, 0, 0.2, 1;
 }
 
+.footer-social-icon-link:hover, .footer-social-icon-link:focus {
+  background-color: #2196F3;
+}
+
 .footer-social-icon-item:not(:last-child) {
   margin-right: 10px;
 }
@@ -738,11 +741,6 @@ body {
   width: 20px;
   height: 20px;
   fill: #fff;
-}
-
-.footer-social-icon-link:hover,
-.footer-social-icon-link:focus {
-  background-color: #2196F3;
 }
 
 .footer-form {
@@ -800,8 +798,6 @@ body {
   width: 24px;
   height: 24px;
   padding-left: 10px;
-  /* padding-top: 13px; */
-  /* padding-bottom: 13px; */
   background-position: center;
 }
 /*# sourceMappingURL=main.css.map */
